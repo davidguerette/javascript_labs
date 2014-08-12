@@ -4,6 +4,8 @@ function NintendoCharacter(firstName, lastName, gender){
   this.firstName = firstName;
   this.lastName = lastName;
   this.gender = gender;
+
+  this.fullName = this.firstName + " " + this.lastName;
 }
 
 var samus = new NintendoCharacter('Samus', 'Aran', 'Female');
@@ -13,6 +15,5 @@ var nintendoCharacters = [samus, luigi, mario];
 
 for (var i = 0; i < nintendoCharacters.length; i++){
   var character = nintendoCharacters[i];
-  console.log("Character " + (i + 1) + ": " + character.firstName
-    + " " + character.lastName + " (" + character.gender + ")");
+  console.log("Character " + (i + 1) + ": " + character.fullName + " (" + character.gender + ")");
 }
